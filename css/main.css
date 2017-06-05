@@ -1,0 +1,15 @@
+#map {
+  height: 400px;
+  width: 600px;  // con porcentaje hay problemas.
+}
+.container {
+  padding-top: 30px;
+}
+/*
+#tamano__barraBuscadora{
+  width: 50%;
+
+}
+.color__azul{
+background-color: blue;
+}*/
