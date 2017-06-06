@@ -1,41 +1,41 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <!--optimizado para mobiles-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <!-- Google Icon Font-->
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-    <link type="text/css" rel="stylesheet" href="css/main.css">
-    <title></title>
-  </head>
-  <body>
-    <div class="navbar-fixed">
-      <nav>
-        <div class="nav-wrapper">
-          <a href="#!" class="brand-logo">Logo</a>
-          <ul class="right hide-on-med-and-down">
-            <li><a href="sass.html">Sass</a></li>
-            <li><a href="badges.html">Components</a></li>
-          </ul>
-        </div>
-      </nav>
+<head>
+  <meta charset="utf-8">
+  <!--optimizado para mobiles-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- Google Icon Font-->
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+  <link type="text/css" rel="stylesheet" href="css/main.css">
+  <title></title>
+</head>
+<body>
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#!" class="brand-logo">Logo</a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="sass.html">Sass</a></li>
+          <li><a href="badges.html">Components</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+
+  <!-- Area de barra de busqueda-->
+  <div class="container">
+
+    <!--Area de mapa  -->
+
+    <div class="row">
+      <div class="col s6 offset-s2 map" ></div>
     </div>
 
-
-    <!-- Area de barra de busqueda-->
-    <div class="container">
-
-      <!--Area de mapa  -->
-
-        <div class="row">
-          <div class="col s6 offset-s2" id="map"></div>
-        </div>
-
-      <div class="row">
-        <nav >
+    <div class="row">
+      <nav >
         <div class="nav-wrapper">
           <form>
             <div class="input-field">
@@ -46,21 +46,24 @@
           </form>
         </div>
       </nav>
-      </div>
+    </div>
 
     <!-- Area de lista -->
-    <section class="contacts">
+    <section class="">
       <!-- 1 Elemento -->
-      <div class="row contact">
-          <div class="card-panel grey lighten-5 z-depth-1">
-            <div class="row valign-wrapper">
-              <div class="col s2">
-                <img src="img/imagen.png" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
-              </div>
-              <div class="col s10">
-                <span class="black-text">
-                  <h5>Bistro La Victoria</h5>
-                  <p>Tabasco 327
+
+
+
+      <div class="row comercio " data-latitud="19.4181283" data-longitud="-99.1739349">
+        <div class="card-panel grey lighten-5 z-depth-1">
+          <div class="row valign-wrapper">
+            <div class="col s2">
+              <img src="img/imagen.png" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+            </div>
+            <div class="col s10 ">
+              <span class="black-text">
+                <h5>Bistro La Victoria</h5>
+                <p>Tabasco 327
                   Roma Nte.
                   06700 Ciudad de México, CDMX
                   México</p>
@@ -71,73 +74,57 @@
           </div>
         </div>
         <!-- 2 Elemento -->
-        <div class="row contact">
+
+        <div class="row comercio " data-latitud='19.411457' data-longitud='-99.1596584'>
+          <div class="card-panel grey lighten-5 z-depth-1">
+            <div class="row valign-wrapper">
+              <div class="col s2">
+                <img src="img/imagen.png" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+              </div>
+              <div class="col s10 ">
+                <span class="black-text">
+                  <h5>Helados</h5>
+                  <p>Tabasco 327
+                    Roma Nte.
+                    06700 Ciudad de México, CDMX
+                    México</p>
+                    <p>Tipo de comida: Mariscos.</p>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- 3 Elemento -->
+          <div class="row comercio " data-latitud="-16.4040105" data-longitud="-71.5565211">
             <div class="card-panel grey lighten-5 z-depth-1">
               <div class="row valign-wrapper">
                 <div class="col s2">
                   <img src="img/imagen.png" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
                 </div>
-                <div class="col s10">
+                <div class="col s10 comercio">
                   <span class="black-text">
-                    <h5>Fonda Fina</h5>
-                    <p>Medellín 79
-                    Roma Nte.
-                    06700 Ciudad de México, CDMX
-                    México</p>
+                    <h5>ZUCCHERO</h5>
+                    <p>Valladolid 100, Cuauhtémoc Roma Nte. 06700 Ciudad de México, CDMX México</p>
                     <p>Tipo de comida:Comida mexicana. </p>
                   </span>
                 </div>
               </div>
             </div>
           </div>
-          <!-- 3 Elemento -->
-          <div class="row contact">
-              <div class="card-panel grey lighten-5 z-depth-1">
-                <div class="row valign-wrapper">
-                  <div class="col s2">
-                    <img src="img/imagen.png" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
-                  </div>
-                  <div class="col s10">
-                    <span class="black-text">
-                      <h5>ZUCCHERO</h5>
-                      <p>Valladolid 100, Cuauhtémoc Roma Nte. 06700 Ciudad de México, CDMX México</p>
-                      <p>Tipo de comida:Comida mexicana. </p>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- 4 Elemento -->
-            <div class="row contact">
-                <div class="card-panel grey lighten-5 z-depth-1">
-                  <div class="row valign-wrapper">
-                    <div class="col s2">
-                      <img src="img/imagen.png" alt="Contact" class="circle responsive-img"> <!-- notice the "circle" class -->
-                    </div>
-                    <div class="col s10">
-                      <span class="black-text">
-                        <h5 class="name">Contramar</h5>
-                        <p class="black-text">Calle Durango 200, Roma, Roma Nte., 06700 Cuauhtémoc, CDMX</p>
-                        <p class="black-text">Tipo de comida: Mariscos.</p>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-    </section><!-- Fin de la area de lista -->
+        </section><!-- Fin de la area de lista -->
 
 
-  </div><!-- Fin del contenedor -->
+      </div><!-- Fin del contenedor -->
 
 
-    <!--Import jQuery before materialize.js-->
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <!-- https://code.jquery.com/jquery-2.1.1.min.js -->
-    <script type="text/javascript" src="js/materialize.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDz_jJNF1ZrSTPecoB8c9lhyTVTx3iioec&callback=initMap"
-    async defer></script>
-    <script type="text/javascript" src="js/mapa.js"></script>
-    <script type="text/javascript" src="js/app.js"></script>
-  </body>
-</html>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="js/jquery.js"></script>
+      <!-- https://code.jquery.com/jquery-2.1.1.min.js -->
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHMILe_MSq_553L8IGzfNyLownOY0bgIQ&callback=obtenerUbicacion"></script>
+      <script type="text/javascript" src="js/mapa.js"></script>
+      <script type="text/javascript" src="js/app.js"></script>
+    </body>
+    </html>
