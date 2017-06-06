@@ -1,13 +1,17 @@
-var contactos = [
+/*var contactos = [
 	{
 		"nombre": "Bistro La Victoria",
 		"direccion": "Tabasco 327 Roma Nte. 06700 Ciudad de México, CDMX México",
     "comida" : "Mariscos",
-		"coordenadas": "",
+		"longitud": "",
+		"latitud": ""
 	},
   {
-		"nombre": "Fonda Fina",
-		"direccion": "  Medellín 79 Roma Nte. 06700 Ciudad de México, CDMX",
+		"nombre": "Helados",
+		"direccion": "  Tabasco 327
+			Roma Nte.
+			06700 Ciudad de México, CDMX
+			México",
     "comida" : " Comida mexicana",
 		"coordenadas": "",
 	},
@@ -17,12 +21,7 @@ var contactos = [
     "comida" : "Comida mexicana",
 		"coordenadas": "",
 	},
-  {
-		"nombre": "Contramar",
-		"direccion": "Calle Durango 200, Roma, Roma Nte., 06700 Cuauhtémoc, CDMX",
-    "comida" : "Mariscos",
-		"coordenadas": "",
-	},
+
 ];
 
 var plantillaContacto = '<div class="row contact">' +
@@ -33,7 +32,7 @@ var plantillaContacto = '<div class="row contact">' +
             '</div>' +
             '<div class="col s10">' +
               '<span class="black-text">'+
-                '<h5 class="name">__nombre__</h5>'+
+               '<h5 class="name data-latitud=__latitud__  data-longitud=__longitud__ >__nombre__</h5>'+
                 '<p class="black-text">__direccion</p>'+
                 '<p class="black-text">___comida__</p>'+
               '</span>'+
@@ -41,3 +40,63 @@ var plantillaContacto = '<div class="row contact">' +
           '</div>' +
         '</div>' +
 	'</div>';
+*/
+
+
+$(document).ready(cargarPagina);
+//se realiza la funcion cargar pagina
+function cargarPagina(){
+	obtenerUbicacion();//llamamos a la funcion
+	$(".comercio").click(cambiarUbicacion); //llamamos a la funcion al hacer click
+}
+
+/*var obtenerUbicacion = function () {
+if (navigator.geolocation) {
+navigator.geolocation.getCurrentPosition(mostrarPosicion);
+} else {
+alert("Actualizar el navegador");
+}
+}*/
+
+function obtenerUbicacion(e) {
+	if (navigator.geolocation) {
+		navigator.geolocation.getCurrentPosition(mostrarPosicion);
+	} else {
+		alert("Geolocalización no es soportado en tu navegador");
+	}
+}
+
+function mostrarPosicion(posicion){
+	var latitud = posicion.coords.latitude;
+	var longitud = posicion.coords.longitude;
+	var coordenadas = {
+		lat: latitud,
+		lng: longitud
+	};
+
+	mostrarMapa(coordenadas);//se llama a la function
+}
+
+function mostrarMapa(coordenadas){
+	var map = new google.maps.Map($('.map')[0],{//se convierte en un arreglo
+		zoom: 17,
+		center: coordenadas
+	});
+	var marker = new google.maps.Marker({
+		position: coordenadas,
+		map: map
+	});
+}
+
+function cambiarUbicacion(){
+	var latitud = $(this).data("latitud");
+	var longitud = $(this).data("longitud");
+
+	var coordenadas={
+		lat: latitud,
+		lng: longitud
+
+	};
+
+  mostrarMapa(coordenadas);
+}
