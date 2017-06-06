@@ -1,48 +1,3 @@
-/*var contactos = [
-	{
-		"nombre": "Bistro La Victoria",
-		"direccion": "Tabasco 327 Roma Nte. 06700 Ciudad de México, CDMX México",
-    "comida" : "Mariscos",
-		"longitud": "",
-		"latitud": ""
-	},
-  {
-		"nombre": "Helados",
-		"direccion": "  Tabasco 327
-			Roma Nte.
-			06700 Ciudad de México, CDMX
-			México",
-    "comida" : " Comida mexicana",
-		"coordenadas": "",
-	},
-  {
-		"nombre": "ZUCCHERO",
-		"direccion": " Valladolid 100, Cuauhtémoc Roma Nte. 06700 Ciudad de México, CDMX México",
-    "comida" : "Comida mexicana",
-		"coordenadas": "",
-	},
-
-];
-
-var plantillaContacto = '<div class="row contact">' +
-        '<div class="card-panel  grey lighten-5 z-depth-1">' +
-          '<div class="row valign-wrapper">' +
-            '<div class="col s2">' +
-              '<img src="__foto__" alt="Contact" class="circle responsive-img">' +
-            '</div>' +
-            '<div class="col s10">' +
-              '<span class="black-text">'+
-               '<h5 class="name data-latitud=__latitud__  data-longitud=__longitud__ >__nombre__</h5>'+
-                '<p class="black-text">__direccion</p>'+
-                '<p class="black-text">___comida__</p>'+
-              '</span>'+
-            '</div>' +
-          '</div>' +
-        '</div>' +
-	'</div>';
-*/
-
-
 $(document).ready(cargarPagina);
 //se realiza la funcion cargar pagina
 function cargarPagina(){
@@ -100,3 +55,43 @@ function cambiarUbicacion(){
 
   mostrarMapa(coordenadas);
 }
+
+/* creacion de plantilla*/
+var contactos = [
+	{
+		"nombre": "Bistro La Victoria",
+		"direccion": "Tabasco 327 Roma Nte. 06700 Ciudad de México, CDMX México",
+    "comida" : "Mariscos",
+		"coordenadas": "{latitud=19.4181283 , longitud=-99.1739349}"
+	},
+  {
+		"nombre": "Helados",
+		"direccion": "  Tabasco 327 Roma Nte.06700 Ciudad de México, CDMX México",
+    "comida" : " Comida mexicana",
+		"coordenadas": "{latitud=19.411457 , longitud=-99.1596584}",
+	},
+  {
+		"nombre": "ZUCCHERO",
+		"direccion": " Valladolid 100, Cuauhtémoc Roma Nte. 06700 Ciudad de México, CDMX México",
+    "comida" : "Comida mexicana",
+		"coordenadas":"{latitud=-16.4040105 , longitud=-71.5565211}",
+	},
+
+];
+
+var plantillaContacto = '<div class="row contact">' +
+        '<div class="card-panel  grey lighten-5 z-depth-1">' +
+          '<div class="row valign-wrapper">' +
+            '<div class="col s2">' +
+              '<img src="__foto__" alt="Contact" class="circle responsive-img">' +
+            '</div>' +
+            '<div class="col s10">' +
+              '<span class="black-text">'+
+               '<h5 class="name data-latitud=__latitud__  data-longitud=__longitud__ >__nombre__</h5>'+
+                '<p class="black-text">__direccion</p>'+
+                '<p class="black-text">___comida__</p>'+
+              '</span>'+
+            '</div>' +
+          '</div>' +
+        '</div>' +
+	'</div>';
