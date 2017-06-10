@@ -1,3 +1,19 @@
+(function () {
+
+//se realiza la funcion cargar pagina
+function cargarPagina(){
+	obtenerUbicacion();//llamamos a la funcion
+	$(".comercio").click(cambiarUbicacion); //llamamos a la funcion al hacer click
+}
+
+/*var obtenerUbicacion = function () {
+if (navigator.geolocation) {
+navigator.geolocation.getCurrentPosition(mostrarPosicion);
+} else {
+alert("Actualizar el navegador");
+}
+}*/
+
 /*var contactos = [
 	{
 		"nombre": "Bistro La Victoria",
@@ -43,21 +59,6 @@ var plantillaContacto = '<div class="row contact">' +
 */
 
 
-$(document).ready(cargarPagina);
-//se realiza la funcion cargar pagina
-function cargarPagina(){
-	obtenerUbicacion();//llamamos a la funcion
-	$(".comercio").click(cambiarUbicacion); //llamamos a la funcion al hacer click
-}
-
-/*var obtenerUbicacion = function () {
-if (navigator.geolocation) {
-navigator.geolocation.getCurrentPosition(mostrarPosicion);
-} else {
-alert("Actualizar el navegador");
-}
-}*/
-
 function obtenerUbicacion(e) {
 	if (navigator.geolocation) {
 		navigator.geolocation.getCurrentPosition(mostrarPosicion);
@@ -100,3 +101,7 @@ function cambiarUbicacion(){
 
   mostrarMapa(coordenadas);
 }
+
+$(document).ready(cargarPagina);
+
+})();
